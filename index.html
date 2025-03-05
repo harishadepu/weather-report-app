@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weather-report</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="heading">wheather-Report</h1>
+        <div class="input-search">
+            <input type="text" placeholder="search city" class="input-text"/>
+            <button class="search-Btn"><img src="/images/search.png" class="seach-logo"/></button>
+        </div>
+        <p class="error">city name error</p>
+        <div class="spinner-border" role="status">
+            <span class="sr-only spinner">Loading...</span>
+          </div>
+        <div class="report">
+            <div class="wheather-report">
+                <img src="/images/drizzle.png" class="weatherIcon"/>
+                <h1 class="temp">22°C</h1>
+                <p class="city">New York</p>
+            </div>
+            <div class="humidity-container">
+                <div class="humidity">
+                    <img src="/images/humidity.png" class="humidity-img"/>
+                    <div>
+                        <h2 class="percentage">64%</h2>
+                        <p class="name">Humidity</p>
+                    </div>
+                </div>
+                <div class="windwaves">
+                    <img src="/images/wind.png" class="wind-img"/>
+                    <div>
+                        <h2 class="km">16 km/h</h2>
+                        <p class="name">wind speed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
