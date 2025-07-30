@@ -12,7 +12,7 @@ const spinner = document.querySelector(".spinner-border");
 
 
 searchBtn.addEventListener("click",()=>{
-    spinner.classList.remove("spinner");
+    spinner.classList.add("spinner");
     const inputvalue = inputtext.value;
     if(!inputvalue){
         alert("enter city name");
@@ -27,9 +27,10 @@ searchBtn.addEventListener("click",()=>{
                 const response = await fetch(url + cityname + `&appid=${ApiKey}`);
                 if(response.status == 404){
                     error.style.display = "block";
+                    spinner.classList.remove("spinner");
                     document.querySelector(".report").style.display = "none";
                 }else{
-                    spinner.classList.add("spinner");
+                    spinner.classList.remove("spinner");
                     let data = await response.json();
                     city.innerHTML = data.name;
                     temp.innerHTML = Math.round(data.main.temp) + "°C";
